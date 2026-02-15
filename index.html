@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homestask</title>
+        <style>
+            #div1{
+    height: 400px;
+    background-image: url(https://img.freepik.com/premium-vector/blue-quiz-background-with-light-bulb-pencils_23-2147598504.jpg?w=360);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+}
+table{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+
+}
+a{
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+#welcome{
+    text-align: center;
+    color: darkgreen;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+body{
+    margin: 0;
+    animation: pooja 6s infinite;
+}
+@keyframes pooja{
+    0%{ background-color: lightseagreen;}
+    25%{ background-color: lightgoldenrodyellow;}
+    50%{ background-color: lightslategray;}
+    75%{ background-color: lightcoral;}
+    100%{ background-color: lightgreen;}
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+    animation: pooja1 2s infinite alternate;
+}
+@keyframes pooja1{
+    from{font-size: 20px; color: green;}
+    to{font-size: 25px; color: blue;}
+    
+}
+        </style>
+    </head>
+    <body onload="register()">
+        <div id="div1">
+            <table>
+                <tr>
+                    <th><a href="#">Home</a></th>
+                    <th><a href="#">General Knowlegde</a></th>
+                    <th><a href="#">Mathmatics</a></th>
+                    <th><a href="#">Science</a></th>
+                    <th><a href="#">Qyestion Bank</a></th>
+                </tr>
+            </table>
+            <h1 style="padding: 70px; text-align: center; color: white; opacity: 0.5;">Codeyoung</h1>
+        </div>
+        <h2>your name is registered below</h2>
+        <p id="welcome"></p>
+        
+
+        <script>
+            function register(){
+                let name = prompt("register your name for the quiz");
+                if(name = null || name = ""){
+                    name = "guest";
+                }
+                document.getElementById("welcome").innerHTML = "Hello " + name + ", Welcome to Tech Learner. Your name is now registered.";
+                document.getElementById("div1").style.backgroundImage =
+                "url('https://cdn-icons-png.flaticon.com/512/10292/10292316.png')";
+            }
+        </script>
+    </body>
+</html>
