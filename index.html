@@ -49,6 +49,34 @@ h2{
     to{font-size: 25px; color: blue;}
     
 }
+.quiz-section{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap;
+    background-color: lightblue;
+
+}
+.card{
+    background: transparent;
+    width: 32%;
+    text-align: center;
+    font-size: 18px;
+}
+.card img{
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+}
+.card button{
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 25px;
+    
+}
+
         </style>
     </head>
     <body onload="register()">
@@ -62,21 +90,55 @@ h2{
                     <th><a href="#">Qyestion Bank</a></th>
                 </tr>
             </table>
-            <h1 style="padding: 70px; text-align: center; color: white; opacity: 0.5;">Codeyoung</h1>
+            <h1 style="padding: 70px; text-align: center; color: orange; opacity: 0.5;">Codeyoung</h1>
         </div>
         <h2>your name is registered below</h2>
         <p id="welcome"></p>
         
+        <div class="quiz-section">
+            <div class="card">
+                <img alt="gk" src="https://media.baamboozle.com/uploads/images/18897/1592633292_279983">
+                <p></p>
+                <button>Start GK Quiz</button>
+            </div>
+            <div class="card">
+                <img alt="math" src="https://image.slidesharecdn.com/interactivecolorfulmathematicsquizpowerpointpresentationtemplate-240215043907-34ee885f/75/Interactive-Colorful-Mathematics-Quiz-Power-Point-Presentation-Template-pptx-1-2048.jpg">
+                <p></p>
+                <button>Start Math Quiz</button>
+            </div>
+            <div class="card">
+                <img alt="Science" src="https://icebreakerideas.com/wp-content/uploads/2019/09/Science-Trivia-e1606543578220.jpg">
+                <p></p>
+                <button>Start Science Quiz</button>
+            </div>
+            <hr>
+        </div>
+
+        <div class="quiz-box" id="gk-quiz">
+            <h2>General Knowlegde Quiz</h2>
+            <p>1.What country has the highest life expectancy?</p>
+            <button onclick="rightAnswer()">Japan</button>
+            <button onclick="wrongAnswer()">China</button>
+        </div>
 
         <script>
             function register(){
                 let name = prompt("register your name for the quiz");
-                if(name = null || name = ""){
+                if(name == null || name == ""){
                     name = "guest";
                 }
                 document.getElementById("welcome").innerHTML = "Hello " + name + ", Welcome to Tech Learner. Your name is now registered.";
                 document.getElementById("div1").style.backgroundImage =
                 "url('https://cdn-icons-png.flaticon.com/512/10292/10292316.png')";
+            }
+            function rightAnswer(){
+                alert("correct answer");
+            }
+            function wrongAnswer(){
+                alert("wrong answer please try again")
+            }
+            function showGkQuiz(){
+                document.getElementById("gk-quiz").style.display = "block";
             }
         </script>
     </body>
