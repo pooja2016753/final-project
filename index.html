@@ -76,6 +76,21 @@ h2{
     padding: 10px 25px;
     
 }
+.quiz-box{
+    display: none;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px yellow;
+}
+.card button{
+    background-color: aqua;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 10px white ;
+}
 
         </style>
     </head>
@@ -87,7 +102,7 @@ h2{
                     <th><a href="#">General Knowlegde</a></th>
                     <th><a href="#">Mathmatics</a></th>
                     <th><a href="#">Science</a></th>
-                    <th><a href="#">Qyestion Bank</a></th>
+                    <th><a href="#">Question Bank</a></th>
                 </tr>
             </table>
             <h1 style="padding: 70px; text-align: center; color: orange; opacity: 0.5;">Codeyoung</h1>
@@ -99,26 +114,118 @@ h2{
             <div class="card">
                 <img alt="gk" src="https://media.baamboozle.com/uploads/images/18897/1592633292_279983">
                 <p></p>
-                <button>Start GK Quiz</button>
+                <button onclick="showGkQuiz()">Start GK Quiz</button>
             </div>
             <div class="card">
                 <img alt="math" src="https://image.slidesharecdn.com/interactivecolorfulmathematicsquizpowerpointpresentationtemplate-240215043907-34ee885f/75/Interactive-Colorful-Mathematics-Quiz-Power-Point-Presentation-Template-pptx-1-2048.jpg">
                 <p></p>
-                <button>Start Math Quiz</button>
+                <button onclick="showMathQuiz()">Start Math Quiz</button>
             </div>
             <div class="card">
                 <img alt="Science" src="https://icebreakerideas.com/wp-content/uploads/2019/09/Science-Trivia-e1606543578220.jpg">
                 <p></p>
-                <button>Start Science Quiz</button>
+                <button onclick="showScienceQuiz()">Start Science Quiz</button>
             </div>
-            <hr>
         </div>
 
         <div class="quiz-box" id="gk-quiz">
             <h2>General Knowlegde Quiz</h2>
-            <p>1.What country has the highest life expectancy?</p>
-            <button onclick="rightAnswer()">Japan</button>
-            <button onclick="wrongAnswer()">China</button>
+            <p><b>1. What country has the highest life expectancy?</b></p>
+            <button onclick="wrongAnswer()">Japan</button>
+            <button onclick="rightAnswer()">China</button>
+            <p><b>2. Where would you be if you standing on the Spanish Steps?</b></p>
+            <button onclick="rightAnswer()">Rome</button>
+            <button onclick="wrongAnswer()">Italy</button>
+            <p><b>3. Which language has the most native speakers?</b></p>
+            <button onclick="wrongAnswer()">English</button>
+            <button onclick="rightAnswer()">Spanish</button>
+            <p><b>4. What is the most common surname in the United States?</b></p>
+            <button onclick="rightAnswer()">Smith</button>
+            <button onclick="wrongAnswer()">Donaldson</button>
+            <p><b>5. What artist has the most streams on Spotify?</b></p>
+            <button onclick="wrongAnswer()">Krile</button>
+            <button onclick="rightAnswer()">Drake</button>
+            <p><b>6. What disease commonly spread on pirate ships?</b></p>
+            <button onclick="wrongAnswer()">Malaria</button>
+            <button onclick="rightAnswer()">Scurvy</button>
+            <p><b>7. Who was the Ancient Greek God of the Sun?</b></p>
+            <button onclick="rightAnswer()">Apollo</button>
+            <button onclick="wrongAnswer()">Selene</button>
+            <p><b>8. What was the name of the crime boss who was head of the feared Chicago Outfit?</b></p>
+            <button onclick="wrongAnswer()">John Robinson</button>
+            <button onclick="rightAnswer()">Al Capone</button>
+            <p><b>9. What year was the United Nations established?</b></p>
+            <button onclick="rightAnswer()">1945</button>
+            <button onclick="wrongAnswer()">1925</button>
+            <p><b>10. What is the hardest natural substance on Earth?</b></p>
+            <button onclick="rightAnswer()">Diamond</button>
+            <button onclick="wrongAnswer()">Steel</button>
+        </div>
+        <div class="quiz-box" id="math-quiz">
+            <h2>Math Quiz</h2>
+            <p><b>1. What is 90-35?</b></p>
+            <button onclick="wrongAnswer()">63</button>
+            <button onclick="rightAnswer()">55</button>
+            <p><b>2. What is half of 10?</b></p>
+            <button onclick="rightAnswer()">5</button>
+            <button onclick="wrongAnswer()">3</button>
+            <p><b>3. What is one half written as a fraction?</b><p>
+            <button onclick="rightAnswer()">1/2</button>
+            <button onclick="wrongAnswer()">1/5</button>
+            <p><b>4. What is 7*7?</b><p>
+            <button onclick="wrongAnswer()">43</button>
+            <button onclick="rightAnswer()">49</button>
+            <p><b>5. What is 12*5?</b></p>
+            <button onclick="rightAnswer()">60</button>
+            <button onclick="wrongAnswer()">55</button>
+            <p><b>6. What is 15*4</b></p>
+            <button onclick="wrongAnswer()">75</button>
+            <button onclick="rightAnswer()">70</button>
+            <p><b>7. What is 14+27</b></p>
+            <button onclick="rightAnswer()">33</button>
+            <button onclick="wrongAnswer()">41</button>
+            <p><b>8. What is 85-39</b></p>
+            <button onclick="rightAnswer()">46</button>
+            <button onclick="wrongAnswer()">50</button>
+            <p><b>9. What is half of 12</b></p>
+            <button onclick="wrongAnswer()">8</button>
+            <button onclick="rightAnswer()">6</button>
+            <p><b>10. What is half of 40</b></p>
+            <button onclick="wrongAnswer()">25</button>
+            <button onclick="rightAnswer()">20</button>
+        </div>
+        <div class="quiz-box" id="science-quiz">
+            <h2>Science Quiz</h2>
+            <p><b>1. What is the largest organ in the human body?</b></p>
+            <button onclick="wrongAnswer()">Veins</button>
+            <button onclick="rightAnswer()">Skin</button>
+            <p><b>2. Which planet is known as the "Red Planet"?</b></p>
+            <button onclick="rightAnswer()">Mars</button>
+            <button onclick="wrongAnswer()">Venus</button>
+            <p><b>3. What is the main gas humans exhale?</b></p>
+            <button onclick="rightAnswer()">Carbon dioxide</button>
+            <button onclick="wrongAnswer()">Oxygen</button>
+            <p><b>4. What do you call a scientist who studies rocks</b></p>
+            <button onclick="wrongAnswer()">Biologist</button>
+            <button onclick="rightAnswer()">Geologist</button>
+            <p><b>5. Roughly how long does it take for sunlight to reach Earth?</b></p>
+            <button onclick="wrongAnswer()">9 minutes</button>
+            <button onclick="rightAnswer()">8 minutes</button>
+            <p><b>6. What do you call an animal that eats only plants?</b></p>
+            <button onclick="rightAnswer()">Herbivore</button>
+            <button onclick="wrongAnswer()">Carnivore</button>
+            <p><b>7. How many planets are there in our solar systems?</b></p>
+            <button onclick="wrongAnswer()">7 planets</button>
+            <button onclick="rightAnswer()">8 planets</button>
+            <p><b>8. What do plants use to make food?</b></p>
+            <button onclick="rightAnswer()">Sunlight</button>
+            <button onclick="wrongAnswer()">Water</button>
+            <p><b>9. How long does it take for the Earth to orbit the sun?</b></p>
+            <button onclick="rightAnswer()">1 year</button>
+            <button onclick="wrongAnswer()">11 month</button>
+            <p><b>10. What are the five human senses?</b></p>
+            <button onclick="wrongAnswer()">Fingers, Hearing, Nails, Head, Arm.</button>
+            <button onclick="rightAnswer()">Sight, Hearing, Smell, Taste, Touch.</button>
         </div>
 
         <script>
@@ -138,7 +245,21 @@ h2{
                 alert("wrong answer please try again")
             }
             function showGkQuiz(){
+                hideAll();
                 document.getElementById("gk-quiz").style.display = "block";
+            }
+            function showMathQuiz(){
+                hideAll()
+                document.getElementById("math-quiz").style.display = "block";
+            }
+            function showScienceQuiz(){
+                hideAll();
+                document.getElementById("science-quiz").style.display = "block";
+            }
+            function hideAll(){
+                document.getElementById("science-quiz").style.display = "none";
+                document.getElementById("gk-quiz").style.display = "none";
+                document.getElementById("math-quiz").style.display = "none";
             }
         </script>
     </body>
